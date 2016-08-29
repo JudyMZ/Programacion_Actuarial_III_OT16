@@ -1,0 +1,35 @@
+---
+title: "Tarea 1 Programacion Acturial III"
+author: "Judy Esperanza Montero Zapata"
+date: "29 de agosto de 2016"
+output: html_document
+---
+#(Kardex)
+#Lista de Calificaciones
+
+##Primer Semestre
+*Programacion Actuarial I         6
+*Intr. a la Profesion Acturial    8
+*DHPC                             8
+*Conceptos de Calculo             10
+*Matemáticas Básicas              9
+*Problemas de Mat. Básicas        9
+
+##Segundo Semestre
+*Programacion Acturial II         8
+*Teoria del Interes I             9
+*Formacion Humana y social        10
+*Claculo diferencial              8
+*Teoria de ecuaciones             7
+
+##Tercer Semestre
+*Teria del Interes II
+*Programacion Acturial III
+*Geometria Analitica
+*Microeconomia
+*Resgistros Academicos
+*Algebra Linal
+
+
+##Judy Esperanza montero Zapata
+
