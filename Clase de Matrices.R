@@ -42,3 +42,97 @@ m2
 rbind(m1,y)
 cbind(m2,y)
 #
+
+
+#Factores
+x<- factor(c("Si", "No", "Si", "Si", "No","Si", "No"))
+x #Cuales son los distintos factores que tienes
+
+table(x)
+# cuenta cuantos no y si aparecieron
+unclass(x)
+# enseña como es la forma en que lo esta almacenando, guarda la secuencia de núemros
+
+x<- factor(c("Si", "No", "Si", "Si", "No","Si", "No"), levels = c("Si", "No"))
+x #Cambiar los niveles
+
+x<- factor(c("azul","azul","rojo","azul", "amarillo", "verde", "azul"))
+x
+table(x)
+
+#los valores faltantes NA (no aplica), NAN (not a number, no es número)
+# NaN 0/0 raiz de un número negativo, te aparecen como valor faltante
+#is.na o is.nan
+
+
+#VALORES FALTANTES
+x<- c(1,2,NA,10,3)
+is.na(x)
+is.nan(x)
+#aqui no se concidera un faltante no númerico
+
+x<- c(1,2,NaN,10,3)
+is.na(x)
+is.nan(x)
+
+#El vector es sola una clase y en las listas cada uno toma su clase
+
+#Una matriz donde cada elemento conservara su clase
+#Data frames, permite almacenar informacion, es como una lista solo que cada fila o columna puede tener distinta clase
+
+#Data Frames
+
+x<- data.frame(Eric = 1:4, Lori=c(T,T,F,F))
+x
+#nombre a cada columna
+row.names(x)<- c("Primero", "segundo", "Tercero", "cuarto")
+x
+#Cambia el número de la fila
+
+#Atributos y Caracteristicas
+nrow(x)# número de filas
+ncol(x)# número de columnas
+attributes(x)
+
+names(x)<- c ("Judy", "Melissa")
+x
+# Los nombres no son excluivos de los data frames
+
+x<- 1:3
+names(x) #Null
+names(x)<- c("Hugo", "Paco", "Luis")
+x
+
+x<- list(a=1:10, b=100:91, c=51:60)
+x
+
+names(x)<- c("seq1","Seq2", "sEq3")
+x
+
+#ahora con matrices
+
+m<- matrix(1:4,2,2)
+m
+attributes(m)
+dimnames(m)<- list(c("fill1", "fill2"), c("col1","col2"))
+m
+
+
+m <- matrix(NA,5,5)
+m
+dimnames(m)<- list(c(1:5),c("A", "B", "C","D","E"))
+m
+
+#fil nombre del archivo
+# header T o F
+
+getwd()
+
+setwd("~/GitHub/Programacion_Actuarial_III_OT16")
+data<- read.csv("Datos_S&P.csv") #simplificacion de la 134
+data
+data <- read.table("Datos_S&P.csv",T,",")# csv depende de table
+data
+
+
+
