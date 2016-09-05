@@ -9,25 +9,39 @@ output: html_document
 
 ##Primer Semestre
 *Programacion Actuarial I         6
-*Intr. a la Profesion Acturial    8
+
+*Intr. a la Profesion Actuarial    8
+
 *DHPC                             8
+
 *Conceptos de Calculo             10
+
 *Matemáticas Básicas              9
+
 *Problemas de Mat. Básicas        9
 
 ##Segundo Semestre
 *Programacion Acturial II         8
+
 *Teoria del Interes I             9
+
 *Formacion Humana y social        10
+
 *Claculo diferencial              8
+
 *Teoria de ecuaciones             7
 
 ##Tercer Semestre
 *Teria del Interes II
+
 *Programacion Acturial III
+
 *Geometria Analitica
+
 *Microeconomia
+
 *Resgistros Academicos
+
 *Algebra Linal
 
 

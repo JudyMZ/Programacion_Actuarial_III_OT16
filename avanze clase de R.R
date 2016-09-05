@@ -58,6 +58,7 @@ x #Cambiar los niveles
 
 x<- factor(c("azul","azul","rojo","azul", "amarillo", "verde", "azul"))
 x
+table(x)
 
 #los valores faltantes NA (no aplica), NAN (not a number, no es número)
 # NaN 0/0 raiz de un número negativo, te aparecen como valor faltante
@@ -132,27 +133,6 @@ data<- read.csv("Datos_S&P.csv") #simplificacion de la 134
 data
 data <- read.table("Datos_S&P.csv",T,",")# csv depende de table
 data
-x<- data
 
-#Colclasses
-#se va a automatico a caracter
-
-setwd("~/GitHub/Programacion_Actuarial_III_OT16")
-data<- read.csv("Datos_S&P.csv") #simplificacion de la 134
-data
-mode(data)
-x<- data
-mode(x)
-
-class(col(x))
-
-unclass(x)
-
-nrow(x)# número de filas
-ncol(x)
-
-t<-x[1,2]
-t
-class(t)
 
 
