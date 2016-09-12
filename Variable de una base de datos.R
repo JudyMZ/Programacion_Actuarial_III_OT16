@@ -170,3 +170,36 @@ x%*%y #verdadera multiplicacion de matrizes
 
 
 
+#ESTRUCTURAs DE CONTROL
+
+#if (<condicion>){}else{}
+#if (<condicion>){}else if (<condicion>){}else{}
+   # El if tambien se le puede asignar a una variable
+
+#for(i in 1:10){print(i)}
+for (i in 1:10){print (i)}
+i
+
+x<- c("a","b","c","d")
+for (i in 1:4){print(x[i])}
+for (i in seq_along(x)){print(x[i])}
+# hace una secuencia
+for (letra in x){print(letra)}
+for (i in 1:4) print(x[i])
+
+
+x<- matrix(1:6,2,3)
+x
+for (i in 1:2){(for(j in 1:3){print(x[i,j])})}
+for (i in 1:2){
+  for(j in 1:3){
+    print(x[i,j])
+  }
+}
+
+x<- matrix(1:6,2,3)
+x
+for (i in seq_len(nrow(x))){for(j in seq_len(ncol(x))){print(x[i,j])}}
+
+for (i in seq_len(nrow(x))){print(x[i,])}
+for (i in seq_len(ncol(x))){print(x[,i])}
