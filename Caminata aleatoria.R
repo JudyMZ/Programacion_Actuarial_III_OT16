@@ -1,7 +1,7 @@
 x<-0
 y<-0
- 
-for (i in 1:100){
+i<-0
+ while (i<= 100){
       z<- 5
     while(z>=3 && z<=10){
            print(z)
@@ -13,7 +13,7 @@ for (i in 1:100){
                } }
          if (z<10){x<-x+1
         }else{y<-y+1}
-       }
+       i<-(x+y)}
 x # son los de abajo
 y # son los de arriba
 
