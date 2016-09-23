@@ -16,7 +16,7 @@ mediacontaminante<-function(directorio,contaminante,id=1:332){
   cabal<- complete.cases(y)
   x<-vector("numeric")
   x<- y[cabal,]
-  z<-(mean(c(x)))
+  z<-(c(x))
   #print(z)
   a1<-z
   a<-(c(a,a1))
@@ -34,4 +34,4 @@ mediacontaminante<-function(directorio,contaminante,id=1:332){
 }
 
 
-mediacontaminante("~/GitHub/Programacion_Actuarial_III_OT16/specdata","nitrate",1:332)
+mediacontaminante("~/GitHub/Programacion_Actuarial_III_OT16/specdata","sulfate",1:10)
