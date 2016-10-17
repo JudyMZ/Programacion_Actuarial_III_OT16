@@ -1,4 +1,5 @@
 mejor<-function(estado,resultado){
+  #Lectura de Datos
   n<-estado
   
   setwd("~/GitHub/Programacion_Actuarial_III_OT16/Caso 2")
@@ -22,6 +23,7 @@ mejor<-function(estado,resultado){
   } else if(resultado=="neumonia"){
     y<-s[[n]]$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia
   }
+  # Revisión de la validez de estado y resultado
   for (i in 1:length(y)){
     if(y[i]==0){y[i]<-NA}
   }
@@ -29,6 +31,7 @@ mejor<-function(estado,resultado){
   bien<- complete.cases(cbind(x,y))
   r<-(cbind.data.frame(x,y)[bien,])
   r2<-r[order(r$y,r$x),]
+  # Regresa el nombre del hospital con la tasa más baja de mortalidad de 30 días
   w<-r2[[1]][[1]]
   w<-as.character(w)
   w

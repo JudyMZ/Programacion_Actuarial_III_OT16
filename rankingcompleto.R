@@ -1,4 +1,5 @@
 rankingcompleto <- function(resultado, num ="mejor"){
+  #lectura de datos
   c1<-c()
   c2<-c()
   for(n in 1:54){
@@ -24,6 +25,7 @@ rankingcompleto <- function(resultado, num ="mejor"){
     for (i in 1:length(y)){
       if(y[i]==0){y[i]<-NA}
     }
+    # Revisión de la validez de estado y resultado
     bien<- complete.cases(cbind(x,y,z))
     r<-(cbind.data.frame(x,y,z)[bien,])
     r2<-r[order(r$y,r$x),]
@@ -41,6 +43,9 @@ rankingcompleto <- function(resultado, num ="mejor"){
     c1<-c(c1,w)
     c2<-c(c2,n1)
   }
+  # Para cada estado, encuentra el hospital con la posición dada.
+  # Regresa un data frame con el nombre del hospital y la abreviatura
+  # del nombre del estado al que pertenece.
   base<-data.frame(hospital=c1,state=c2,row.names = c2)
   base
 }

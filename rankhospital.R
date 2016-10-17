@@ -1,5 +1,7 @@
 rankhospital <- function(estado, resultado, num = "mejor"){
   
+  #Lectura de datos
+  
   n<-estado
   setwd("~/GitHub/Programacion_Actuarial_III_OT16/Caso 2")
   outcome<- read.csv("outcome-of-care-measures.csv", colClasses = "character")
@@ -21,6 +23,8 @@ rankhospital <- function(estado, resultado, num = "mejor"){
   } else if(resultado=="neumonia"){
     y<-s[[n]]$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia
   }
+  
+  #Revisión de la validez de estado y resultado
   for (i in 1:length(y)){
     if(y[i]==0){y[i]<-NA}
   }
@@ -35,6 +39,8 @@ rankhospital <- function(estado, resultado, num = "mejor"){
   }else if(num<=nrow(r2)){w<-r2[[1]][[num]]
   }else if (num>nrow(r2)){w<-NA}
   
+  # Regresa el nombre del hospital con el puesto dado de la tasa más
+  # baja de mortalidad de 30 días
   w<-as.character(w)
   w
 }
